@@ -1,12 +1,10 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import notifications from "./data";
+import notifications from "./data/notifications.js";
 import Notification from "./components/notification";
 
 function App() {
-  const [data, setData] = useState(notifications);
+  const [data] = useState(notifications);
 
   const arrayOfNotifications = data.map((item) => {
     <Notification key={item.name} {...item} />;

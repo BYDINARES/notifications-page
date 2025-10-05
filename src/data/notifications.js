@@ -48,3 +48,5 @@ const notifications = [
     status: "read",
   },
 ];
+
+export default notifications;
