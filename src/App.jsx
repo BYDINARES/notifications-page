@@ -6,9 +6,9 @@ import Notification from "./components/notification";
 function App() {
   const [data] = useState(notifications);
 
-  const arrayOfNotifications = data.map((item) => {
-    <Notification key={item.name} {...item} />;
-  });
+  const arrayOfNotifications = data.map((item, index) => (
+    <Notification key={index} {...item} />
+  ));
 
   return (
     <>
@@ -20,7 +20,7 @@ function App() {
 
         <button>Mark all as read</button>
       </header>
-      {arrayOfNotifications}
+      <main>{arrayOfNotifications}</main>
     </>
   );
 }

@@ -1,6 +1,7 @@
 const notifications = [
   {
     user: "Mark Webber",
+    img: "./images/avatar-mark-webber.webp",
     action: "reacted to your recent post",
     target: "My first tournament today!",
     time: "1m ago",
@@ -8,12 +9,14 @@ const notifications = [
   },
   {
     user: "Angela Gray",
+    img: "./images/avatar-angela-gray.webp",
     action: "followed you",
     time: "5m ago",
     status: "unread",
   },
   {
     user: "Jacob Thompson",
+    img: "./images/avatar-jacob-thompson.webp",
     action: "has joined your group",
     target: "Chess Club",
     time: "1 day ago",
@@ -21,6 +24,7 @@ const notifications = [
   },
   {
     user: "Rizky Hasanuddin",
+    img: "./images/avatar-rizky-hasanuddin.webp",
     action: "sent you a private message",
     time: "5 days ago",
     message:
@@ -29,12 +33,14 @@ const notifications = [
   },
   {
     user: "Kimberly Smith",
+    img: "./images/avatar-kimberly-smith.webp",
     action: "commented on your picture",
     time: "1 week ago",
     status: "read",
   },
   {
     user: "Nathan Peterson",
+    img: "./images/avatar-nathan-peterson.webp",
     action: "reacted to your recent post",
     target: "5 end-game strategies to increase your win rate",
     time: "2 weeks ago",
@@ -42,6 +48,7 @@ const notifications = [
   },
   {
     user: "Anna Kim",
+    img: "./images/avatar-anna-kim.webp",
     action: "left the group",
     target: "Chess Club",
     time: "2 weeks ago",

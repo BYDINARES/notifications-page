@@ -1,42 +1,50 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  background-color: aliceblue;
+  color: black;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+#root main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+#root main section {
+  width: 90%;
+  background-color: rgba(235, 234, 234, 0.696);
+  display: grid;
+  padding: 3%;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: auto auto;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#root main section img {
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#root main section div.top-side-notification {
+  grid-column: 2;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#root main section div.top-side-notification h3.user-name {
+  font-weight: 700;
+  margin: 0%;
 }
-
-.card {
-  padding: 2em;
+#root main section div.top-side-notification p.action {
+  margin: 0%;
 }
-
-.read-the-docs {
-  color: #888;
+#root main section div.top-side-notification p.target {
+  font-weight: 500;
+  margin: 0%;
 }
+#root main section small.time {
+  grid-column: 2;
+  grid-row: 2;
+}
+#root main section p.message {
+  grid-column: 2;
+  grid-row: 2;
+}/*# sourceMappingURL=App.css.map */
