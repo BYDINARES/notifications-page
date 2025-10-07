@@ -14,11 +14,11 @@ function App() {
     <>
       <header>
         <div className="notifications-counter-container">
-          <h1 className="title">Notifications</h1>{" "}
-          <p className="number-of-notifications"></p>
+          <h1 className="title">Notifications</h1>
+          <p className="number-of-notifications">{"0"}</p>
         </div>
 
-        <button>Mark all as read</button>
+        <button className="all-read-button">Mark all as read</button>
       </header>
       <main>{arrayOfNotifications}</main>
     </>

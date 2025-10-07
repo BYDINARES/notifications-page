@@ -4,11 +4,10 @@ export default function Notification(props) {
       <section>
         <img src={props.img} alt="An avatar" />
 
-        <div className="top-side-notification">
-          <h3 className="user-name">{props.user}</h3>
-          <p className="action">{props.action}</p>
-          {props.target && <p className="target">{props.target}</p>}
-        </div>
+        <p className="notification-text">
+          <span className="user-name">{props.user}</span> {props.action}
+          {props.target && <span className="target"> {props.target}</span>}
+        </p>
 
         <small className="time">{props.time}</small>
 

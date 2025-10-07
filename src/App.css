@@ -1,7 +1,62 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/src/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+/* Optional static fallbacks for browsers that don't handle variable fonts well */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/src/assets/fonts/static/PlusJakartaSans-Medium.ttf") format("truetype");
+  font-weight: 500; /* one single weight */
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/src/assets/fonts/static/PlusJakartaSans-ExtraBold.ttf") format("truetype");
+  font-weight: 800; /* one single weight */
+  font-style: normal;
+  font-display: swap;
+}
 #root {
   width: 100%;
+  box-sizing: border-box;
   background-color: aliceblue;
   color: black;
+  padding: 2%;
+  font-family: "Plus Jakarta Sans";
+}
+#root header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3%;
+}
+#root header .notifications-counter-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#root header .notifications-counter-container h1.title {
+  margin: 0%;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 6cqi;
+}
+#root header .notifications-counter-container p.number-of-notifications {
+  background-color: rgb(0, 33, 95);
+  font-size: larger;
+  color: white;
+}
+#root header button.all-read-button {
+  all: unset;
+  cursor: pointer;
+  color: rgb(128, 128, 128);
+  font-weight: 500;
+  font-size: 3cqi;
 }
 #root main {
   display: flex;
@@ -20,23 +75,21 @@
 #root main section img {
   grid-column: 1/2;
   grid-row: 1/2;
+  height: 90%;
 }
-#root main section div.top-side-notification {
+#root main section p.notification-text {
   grid-column: 2;
   grid-row: 1/2;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0%;
+  margin: 0%;
 }
-#root main section div.top-side-notification h3.user-name {
+#root main section p.notification-text span.user-name {
   font-weight: 700;
   margin: 0%;
 }
-#root main section div.top-side-notification p.action {
+#root main section p.notification-text span.action {
   margin: 0%;
 }
-#root main section div.top-side-notification p.target {
+#root main section p.notification-text span.target {
   font-weight: 500;
   margin: 0%;
 }
