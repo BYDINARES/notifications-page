@@ -18,7 +18,7 @@ const notifications = [
     user: "Jacob Thompson",
     img: "./images/avatar-jacob-thompson.webp",
     action: "has joined your group",
-    target: "Chess Club",
+    activity: "Chess Club",
     time: "1 day ago",
     status: "unread",
   },
@@ -27,6 +27,8 @@ const notifications = [
     img: "./images/avatar-rizky-hasanuddin.webp",
     action: "sent you a private message",
     time: "5 days ago",
+    activity: "Chess Club",
+
     message:
       "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
     status: "read",
@@ -50,7 +52,7 @@ const notifications = [
     user: "Anna Kim",
     img: "./images/avatar-anna-kim.webp",
     action: "left the group",
-    target: "Chess Club",
+    activity: "Chess Club",
     time: "2 weeks ago",
     status: "read",
   },

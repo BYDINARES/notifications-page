@@ -3,15 +3,19 @@ export default function Notification(props) {
     <>
       <section>
         <img src={props.img} alt="An avatar" />
-
         <p className="notification-text">
           <span className="user-name">{props.user}</span> {props.action}
           {props.target && <span className="target"> {props.target}</span>}
+          {props.activity && (
+            <span className="activity"> {props.activity}</span>
+          )}
         </p>
 
-        <small className="time">{props.time}</small>
+        <div className="bottom-text">
+          <small className="time">{props.time}</small>
+        </div>
 
-        <p className="message">{props.message}</p>
+        {props.message && <p className="message">{props.message}</p>}
       </section>
     </>
   );
