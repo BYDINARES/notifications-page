@@ -14,7 +14,7 @@ export default function Notification(props) {
           {props.activity && (
             <span className="activity"> {props.activity}</span>
           )}
-          {props.status === "unread" ? <span></span> : null}
+          {props.status === "unread" ? <span className="red-dot"></span> : null}
         </p>
 
         <div className="bottom-text">
