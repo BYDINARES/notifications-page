@@ -39,6 +39,7 @@ const notifications = [
     action: "commented on your picture",
     time: "1 week ago",
     status: "read",
+    yourPicture: "./images/image-chess.webp",
   },
   {
     user: "Nathan Peterson",

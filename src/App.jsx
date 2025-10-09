@@ -4,11 +4,19 @@ import notifications from "./data/notifications.js";
 import Notification from "./components/notification";
 
 function App() {
-  const [data] = useState(notifications);
+  const [data, setData] = useState(notifications);
 
   const arrayOfNotifications = data.map((item, index) => (
     <Notification key={index} {...item} />
   ));
+
+  function markAllAsRead() {
+    setData((prevData) =>
+      prevData.map((user) =>
+        user.status === "unread" ? { ...user, status: "read" } : user
+      )
+    );
+  }
 
   return (
     <>
@@ -18,7 +26,9 @@ function App() {
           <p className="number-of-notifications">{"0"}</p>
         </div>
 
-        <button className="all-read-button">Mark all as read</button>
+        <button className="all-read-button" onClick={() => markAllAsRead()}>
+          Mark all as read
+        </button>
       </header>
       <main>{arrayOfNotifications}</main>
     </>

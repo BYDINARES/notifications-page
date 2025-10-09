@@ -69,6 +69,9 @@
 #root header button.all-read-button :focus-visible {
   background-color: rgb(238, 238, 238);
 }
+#root header button.all-read-button:active {
+  transform: scale(1.4);
+}
 #root main {
   display: flex;
   flex-direction: column;
@@ -78,13 +81,12 @@
 }
 #root main section {
   width: 90%;
-  background-color: rgba(235, 234, 234, 0.696);
   display: grid;
   padding: 3%;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 20% auto auto;
   grid-template-rows: auto auto auto;
 }
-#root main section img {
+#root main section img.avatar {
   grid-column: 1/2;
   grid-row: 1/3;
   height: 12cqi;
@@ -120,6 +122,15 @@
   color: rgb(11, 37, 151);
   margin: 0%;
 }
+#root main section p.notification-text span.red-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  margin-left: 8px; /* space between text and dot */
+  flex-shrink: 0; /* prevents shrinking in flex containers */
+}
 #root main section div.bottom-text {
   grid-row: 2;
   grid-column: 2;
@@ -135,4 +146,14 @@
 #root main section p.message:hover, #root main section p.message:focus-visible {
   background-color: rgb(192, 210, 221);
   cursor: pointer;
+}
+#root main section img.your-post {
+  grid-column: 3;
+  grid-row: 1/3;
+  justify-self: right;
+  height: 8cqi;
+  width: 8cqi;
+  cursor: pointer;
+  margin-left: 2cqi;
+  margin-right: 2cqi;
 }/*# sourceMappingURL=App.css.map */
