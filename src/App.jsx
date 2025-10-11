@@ -18,12 +18,16 @@ function App() {
     );
   }
 
+  const numberOfUnreadMesseages = data.filter(
+    (user) => user.status === "unread"
+  ).length;
+
   return (
     <>
       <header>
         <div className="notifications-counter-container">
           <h1 className="title">Notifications</h1>
-          <p className="number-of-notifications">{"0"}</p>
+          <p className="number-of-notifications">{numberOfUnreadMesseages}</p>
         </div>
 
         <button className="all-read-button" onClick={() => markAllAsRead()}>
